@@ -3,16 +3,147 @@
 <head>
 	<title>Avanade Angular Academy by Gama - Simulado #1</title>
 	<meta charset="utf-8">
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" 
+      integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">      
+    <link href="jumbotron.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 <body>
-<main role="main" id="main"></main>
-<script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+  <main role="main" id="main" class="text-center">
+    <div class="jumbotron headerInscricao">
+      <div class="container">
+        <h1 class="display-5">DÊ PROPÓSITO PARA SEU CÓDIGO</h1>
+        <p class="textoHeader">Cansado de desenvolver projetos sem sentido? Participe do Avanade Angular Academy</p>
+        <p>
+          <button type="button" id="btn-apply-form" class="btn btn-primary" data-toggle="modal" data-target="#apply-modal" class="textoHeader">
+              Inscreva-se
+          </button>
+        </p>
+      </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <h6>Inscrições</h6>
+            <p class="periodo">02/dez a 04/jan</p>
+            <p class="text-left">Para se inscrever basta preencher o formulário e se preparar para o nosso teste técnico com cursos online e simulados.</p>
+            
+          </div>
+          <div class="col-md-3">
+            <h6>Teste técnico</h6>
+            <p class="periodo">05 e 06/jan</p>
+            <p class="text-left">Em seguida, prove que você está preparado fazendo os testes técnicos totalmente mão na massa.</p>
+            
+         </div>
+          <div class="col-md-3">
+            <h6>Seleção e contratação</h6>
+            <p class="periodo">07/jan a 14/jan</p>
+            <p class="text-left">Os melhores candidatos serão entrevistados e contratados pela Avanade.</p>
+            
+          </div>
+          <div class="col-md-3">
+            <h6>Treinamento</h6>
+            <p class="periodo">15/jan a 26/jan</p>
+            <p class="text-left">Serão duas semanas de treinamento super hands-on com os melhores devs do mercado.</p>
+            
+          </div>
+        </div>
+  
+        <hr>
+  
+        <footer>
+          <p>&copy; Avanade e Gama Academy 2017</p>
+        </footer>
+      </div>
+  
+      <div class="modal fade" id="apply-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Inscrição</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+
+            <form id="registrationForm" class="form-horizontal">
+            <div class="modal-body">
+                <div class="form-group">
+                    <div class="col-xs-4">
+                        <input type="text" class="form-control" placeholder="Nome" id="name" />
+                    </div>
+                    <div class="alert alert-warning" role="alert" id="feedback-name">
+                        Não pode estar vazio
+                    </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-xs-5">
+                      <input type="email" class="form-control" placeholder="Email" id="email" />
+                  </div>
+                  <div class="alert alert-warning" role="alert" id="feedback-email">
+                      Não é válido
+                  </div>
+                </div>
+            </div>
+            <div class="alert alert-success" role="alert" id="apply-success">
+              Inscrição realizada com sucesso!
+            </div>
+            <div class="alert alert-danger" role="alert" id="apply-error">
+              Ocorreu um erro na inscrição.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+              <button type="submit" id="btn-apply" class="btn btn-primary">Enviar</button>
+            </div>
+          </div>
+        </form>
+        </div>
+      </div>
+  </main>
+
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  
+  <script>
+
+    $("#btn-apply-form").on("click", function () {
+      $(".alert-warning").hide();
+      $(".alert-danger").hide();
+      $(".alert-success").hide();
+    })
+
+    $("#registrationForm").on("submit", function () {
+
+      var emailValue = $('#email').val();
+
+      $.ajax({
+        method: 'POST',
+        url: 'http://avanade.gama.academy/api/process_applications',
+        dataType: 'json',
+        headers: { EMAIL: emailValue },
+        contentType: 'application/json',
+        data: JSON.stringify({ process_application: { name: $('#name').val(), email: emailValue } }),
+        success: function(json) { 
+          $(".alert-warning").hide();
+          $(".alert-danger").hide();
+          $(".alert-success").show();
+          $("#registrationForm")[0].reset();
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+          $(".alert-success").hide();
+          $(".alert-danger").show();
+          $(".alert-warning").show();
+          $("#registrationForm")[0].reset();
+        }
+      });
+      return false;
+    })
+    </script>
 </body>
 </html>
