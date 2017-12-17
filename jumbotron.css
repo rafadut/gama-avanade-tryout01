@@ -1,0 +1,48 @@
+.headerInscricao {
+  background: url(img/background-main.jpg) no-repeat fixed 0px -250px; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+  border-radius: 0;
+  /* font-family: 'Montserrat', sans-serif; */
+}
+
+.textoHeader {
+  font-weight: 500;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {
+  background-color: #259A35;
+  border-color: #259A35;
+}
+
+.btn-primary:hover {
+  background-color: darkgreen;
+  border-color: darkgreen;
+}
+
+.display-5 {
+  font-weight: 900;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+h6 {
+  font-weight: bold;
+}
+
+.periodo {
+  font-size: 0.8rem;
+}
